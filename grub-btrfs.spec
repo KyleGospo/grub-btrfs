@@ -56,10 +56,9 @@ make DESTDIR=%buildroot install
 # are going to be installed into target system where the rpm is installed.
 %files
 %license LICENSE
-%doc README.md
-%doc initramfs-overlayfs.md
+%doc README.md initramfs-overlayfs.md
 %{_sysconfdir}/grub.d/41_snapshots-btrfs
-%{_sysconfdir}/default/grub-btrfs/config
+%config(noreplace) %{_sysconfdir}/default/grub-btrfs/config
 %{_unitdir}/grub-btrfs.path
 %{_unitdir}/grub-btrfs.service
 
