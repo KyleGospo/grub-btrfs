@@ -32,6 +32,19 @@ Refer to the [documentation](https://github.com/Antynea/grub-btrfs/blob/master/i
 
 - - -
 ### Installation:
+#### Fedora
+Available as two separate packages, one for manual snapshots/snapper, and one for timeshift.
+
+Enable the [Copr](https://copr.fedorainfracloud.org/coprs/kylegospo/grub-btrfs/) repository:
+```
+dnf copr enable kylegospo/grub-btrfs 
+```
+Then, install one of the below packages:
+```
+sudo dnf install grub-btrfs
+sudo dnf install grub-btrfs-timeshift
+```
+
 #### Arch Linux
 The package is available in the community repository [grub-btrfs](https://archlinux.org/packages/community/any/grub-btrfs/)
 ```
@@ -70,7 +83,7 @@ Booting into read-only snapshots is fully supported when choosing "btrfs" as fil
 Generate your grub menu after installation for the changes to take effect.  
 For example:  
 On **Arch Linux** or **Gentoo** use `grub-mkconfig -o /boot/grub/grub.cfg`.  
-On **Fedora** use `grub2-mkconfig -o /boot/grub2/grub.cfg`  
+On **Fedora** use `grub2-mkconfig -o /etc/grub2.cfg`  
 On **Debian-like** distribution `update-grub` is an alias to `grub-mkconfig ...`
 - - -
 ### Customization:
